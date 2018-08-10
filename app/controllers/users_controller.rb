@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   end
 
   def create
-     user = User.new(user_params).save
+    if user = User.new(user_params).save
+      session[:user_id] = user.id
      redirect_to root_path
   end
 
