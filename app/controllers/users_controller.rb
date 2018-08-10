@@ -5,12 +5,9 @@ class UsersController < ApplicationController
 
   def create
     user = User.new(user_params).save
-    if user.save
-      session[:user_id] = user.id
-      redirect_to root_path
-    else
-      redirect_to new_user_path
-    end
+    session[:user_id] = user.id
+    redirect_to root_path
+
   end
 
    private
