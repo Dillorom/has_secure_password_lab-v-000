@@ -8,7 +8,7 @@ class UsersController < ApplicationController
       @user = User.create(params[:user_params])
       redirect_to root_path
     else
-      render "new"
+      redirect_to new_user_path
     end
   end
 
