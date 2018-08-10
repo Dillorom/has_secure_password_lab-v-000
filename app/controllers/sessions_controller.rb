@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:name] => params[:name])
-    session[:user_id] = User.last.id
-    redirect_to root_path
+    @user = User.find_by(name: params[:name])
+    return head(:forbidden) unless params[:password] == @user.password
+    session[:user_id] = @user.id
   end
 end
