@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   end
 
   def create
-
      user = User.new(user_params).save
+     redirect_to root_path
    end
 
    private
