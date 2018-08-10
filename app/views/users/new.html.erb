@@ -1,0 +1,10 @@
+<h1> Sign up</h1>
+
+<%=form_for @user do %>
+<%= label :username %>
+<%= text_field :username %>
+<%= label :password %>
+<%= password_field :password_digest%>
+<%= password_confirmation_field :password_confirmation %>
+<%= submit %>
+<% end %>
