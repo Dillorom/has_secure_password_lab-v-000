@@ -1,1 +1,2 @@
-<h1> Welcome! </h1>
+<% if logged_in %>
+  <h1> Welcome, <%= current_user.username!%> </h1>
