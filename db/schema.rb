@@ -13,7 +13,4 @@
 
 ActiveRecord::Schema.define(version: 20180810171643) do
 
-# Could not dump table "users" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
-
 end
