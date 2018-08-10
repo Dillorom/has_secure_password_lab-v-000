@@ -3,6 +3,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:email] => params[:email])
+    @user = User.find(params[:username] => params[:username])
   end
 end
