@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def create
     if @user && @user.authenticate(params[:password])
-      @user = User.create(params[:user_params])
+      @user = User.new
       redirect_to root_path
     else
       redirect_to new_user_path
